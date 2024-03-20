@@ -9,53 +9,47 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-// MILESTONE 0:
-const teams = [
+// creo un array di oggetti con i dati forniti
+const arrayTeam = [
   {
-    name: "Wayne Barnett",
-    role: "Founder & CEO",
-    photo: "wayne-barnett-founder-ceo.jpg",
+    nome: "Wayne Barnett",
+    ruolo: "Founder & CEO",
+    foto: "wayne-barnett-founder-ceo.jpg",
   },
   {
-    name: "Angela Caroll",
-    role: "Chief Editor",
-    photo: "angela-caroll-chief-editor.jpg",
+    nome: "Angela Caroll",
+    ruolo: "Chief Editor",
+    foto: "angela-caroll-chief-editor.jpg",
   },
   {
-    name: "Walter Gordon",
-    role: "Office Manager",
-    photo: "walter-gordon-office-manager.jpg",
+    nome: "Walter Gordon",
+    ruolo: "Office Manager",
+    foto: "walter-gordon-office-manager.jpg",
   },
   {
-    name: "Angela Lopez",
-    role: "Social Media Manager",
-    photo: "angela-lopez-social-media-manager.jpg",
+    nome: "Angela Lopez",
+    ruolo: "Social Media Manager",
+    foto: "angela-lopez-social-media-manager.jpg",
   },
   {
-    name: "Scott Estrada",
-    role: "Developer",
-    photo: "scott-estrada-developer.jpg",
+    nome: "Scott Estrada",
+    ruolo: "Developer",
+    foto: "scott-estrada-developer.jpg",
   },
   {
-    name: "Barbara Ramos",
-    role: "Graphic Designer",
-    photo: "barbara-ramos-graphic-designer.jpg",
+    nome: "Barbara Ramos",
+    ruolo: "Graphic Designer",
+    foto: "barbara-ramos-graphic-designer.jpg",
   },
 ];
 
-// MILESTONE 1:
-// Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
+const div = document.getElementById("contenitore");
 
-for (let key in members) {
-  console.log(
-    key +
-      ": " +
-      members[key].firstName +
-      " " +
-      members[key].lastName +
-      " " +
-      members[key].role +
-      " " +
-      members[key].image
-  );
+for (let i = 0; i < 6; i++) {
+  console.log(arrayTeam[i].nome);
+  console.log(arrayTeam[i].ruolo);
+  console.log(arrayTeam[i].foto);
+  div.innerHTML += `<div> ${arrayTeam[i].nome}</div>`;
+  div.innerHTML += `<div> ${arrayTeam[i].ruolo}</div>`;
+  div.innerHTML += `<img src="./img/${arrayTeam[i].foto}"></img>`;
 }
